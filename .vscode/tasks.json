@@ -1,0 +1,38 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Generate Doxygen Documentation",
+            "type": "shell",
+            "command": "cd docs/Doxygen; .\\generate_docs_en.ps1",
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "new"
+            }
+        },
+        {
+            "label": "Open Doxygen HTML",
+            "type": "shell",
+            "command": "Start-Process docs\\Doxygen\\Output\\html\\index.html",
+            "problemMatcher": [],
+            "group": "none"
+        }
+    ]
+}
+
+// 1. 문서 생성
+// Ctrl + Shift + P 누르기
+// "Tasks: Run Task" 입력
+// "Generate Doxygen Documentation" 선택
+// 2. HTML 문서 열기
+// Ctrl + Shift + P 누르기
+// "Tasks: Run Task" 입력
+// "Open Doxygen HTML" 선택
+
+// 단축키 설정 (선택사항)
+// 더 빠르게 실행하려면 .vscode/keybindings.json에 추가:
